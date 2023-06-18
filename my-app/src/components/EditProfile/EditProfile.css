@@ -1,0 +1,45 @@
+.editProfile{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.editProfile .EditImg img{
+    width: 10rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    margin-left: 23rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.editProfile .EditForm .formElements{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+}
+
+.formElements label{
+    padding: 10px;
+    margin: 10px;
+    font-size: larger;
+}
+
+.formElements input{
+    padding: 8px;
+    width: 70%;
+    margin-left: 1.5rem;
+}
+
+.formElements .form-btns{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.form-btns button {
+    margin-left: 4rem;
+    margin-right: 2rem;
+    font-size: x-large;
+}
