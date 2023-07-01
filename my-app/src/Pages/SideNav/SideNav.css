@@ -92,7 +92,36 @@
 
 .left .btn{
     margin-top: 1rem;
-    width: 100%;
+    width: 80%;
     text-align: center;
     padding: 1rem 0;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    .left .sidebar h3{
+        font-size: 0.7rem;
+        margin-left: 1rem;
+    }
+    .left .sidebar .btn{
+        width: 70%;
+        padding: 0 0;
+        margin-left: 1.5rem;
+    }
+    .left .sidebar a{
+        margin-left:-1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 325px) and (max-width: 760px){
+    .left .sidebar a{
+        margin-left: -1rem;
+    }
+    .left .sidebar .btn{
+        margin-left: 0.8rem;
+    }
+    .left .sidebar h3{
+       display: none;
+    }
 }

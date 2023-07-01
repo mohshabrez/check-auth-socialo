@@ -21,19 +21,21 @@
 }
 
 .profilePage .profileImg .profileInfo{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-self:center;
-    justify-items: center;
-    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
 }
 
 .profileInfo div{
-   margin-right: 10rem;
+   margin-left: 10rem;
+}
+
+.profileInfo p {
+    display: block;
 }
 
 .profileInfo .postsCount{
-    margin-left: 10rem;
+    margin-left: 11rem;
 }
 
 .About {
@@ -45,9 +47,12 @@
 }
 
 .About .profile-about {
-    margin-top: -2rem;
+    margin-top: -0.4rem;
 }
 
+.About .profile-about p{
+    line-height: 2rem;
+}
 
 
 .profile-btns button{
@@ -60,3 +65,14 @@
     margin-right: 10rem;
 }
 
+@media screen and (max-width: 768px){
+    .profile-btns .btns-div button{
+       margin: 0.4rem;
+       padding: 0.6rem;
+    }
+    .profile-posts{
+        margin-left: 12rem;
+        margin-right: -10rem;
+    }
+
+}

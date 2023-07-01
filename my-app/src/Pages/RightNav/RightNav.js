@@ -1,14 +1,27 @@
+import { UseAuth } from "../../Context/AuthContext"
+import { UseMedia } from "../../Context/MediaContext"
 import { FollowersCard } from "../../components/FollowersCard/FollowersCard"
 import { FriendRequest } from "../../components/FriendRequest/FriendRequest"
 import { MessageCategory } from "../../components/MessagesCategory/MessageCategory"
 import {ProfileCard} from "../../components/ProfileCard/ProfileCard"
 import "./RightNav.css"
 export function RightNav(){
+    const {currentUser} = UseAuth();
+    const {stories} = UseMedia()
+
+    const filterUsers = stories.filter((user) => user?.data?.uid !== currentUser.uid)
+
     return(
         <>
         <div className="right">
             <ProfileCard/>
-            <FollowersCard/>
+            <div className="followersSection">
+            <h4>Connect with New people!!!</h4>
+            {filterUsers.map((user) => (
+                <FollowersCard key={user.id} user={user} />
+                ))
+            }
+            </div>
 
             {/* <div className="messages">
                 <div className="heading">

@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MediaProvider } from './Context/MediaContext';
 import { AuthProvider } from './Context/AuthContext';
+import { BookProvider } from './Context/BookContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +19,9 @@ root.render(
     <BrowserRouter>
       <AuthProvider>
         <MediaProvider>
-          <App />
+          <BookProvider>
+           <App />
+          </BookProvider>
         </MediaProvider>
       </AuthProvider>
     </BrowserRouter>

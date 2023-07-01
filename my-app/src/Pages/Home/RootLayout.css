@@ -19,7 +19,7 @@ nav .container{
 }
 
 nav .backarrow{
-    margin-left: -2rem;
+    margin-left: -1rem;
 }
 
 nav .log{
@@ -50,4 +50,29 @@ nav .create{
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+@media screen and (max-width: 768px){
+    nav .log{
+        margin-left: -3rem;
+    }
+
+}
+
+@media screen and (min-width: 325px) and (max-width: 760px){ 
+    .search-bar input[type="search"] {
+        width: 10vw;
+        margin-left: 0.4rem;
+    }
+    nav .create{
+        gap: 1rem;
+    }
+    nav .backarrow{
+        margin-left: -1rem;
+    }
+    
+    nav .log{
+        margin-left: -1rem;
+        margin-top: -0.4rem;
+    }
 }

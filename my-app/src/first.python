@@ -1,0 +1,6 @@
+num=input(int("Enter a number:"))
+num2=input(int("Enter a number:"))
+if(num>num2):
+    print("one")
+else:
+    print("two")

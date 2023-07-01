@@ -4,6 +4,7 @@ import { MediaReducer } from "../Reducer/MediaReducer";
 import { ACTIONS } from "../Reducer/MediaReducer";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../config/firebase";
+import { UseAuth } from "./AuthContext";
 
 
 const MediaContext = createContext(null)
@@ -14,6 +15,8 @@ const dispatchContext = createContext(null)
 export function MediaProvider({children}){
     const[posts, setPosts] = useState([])
     const[stories, setStories] = useState([])
+    
+
 
     useEffect(() => {
         const unsub = onSnapshot(collection(db, "posts"), (snapshot) => {
@@ -23,12 +26,14 @@ export function MediaProvider({children}){
             setStories(snapshot.docs.map(doc=> ({id: doc.id, data: doc.data()})))
           });
     },[])
-
-    console.log(stories)
     
+    
+    
+
     const initialState={
-        PostsData:[]
+        PostsData: []
     }
+
     const[state, dispatch] = useReducer(MediaReducer, initialState)
     return(
         <MediaContext.Provider value={{posts, state, stories}}>

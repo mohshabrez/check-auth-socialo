@@ -32,3 +32,19 @@ main .container .left .profile{
     background: var(--color-white);
     border-radius: var(--card-border-radius);
 }
+
+@media screen and (min-width: 325px) and (max-width: 760px){
+  .handle{
+    display: none;
+  }
+
+  main .container{
+    display: grid;
+    grid-template-columns: 18vw 90vw;
+    column-gap: 1.3rem;
+    position: relative;
+}
+  .right{
+    display: none;
+  }
+}

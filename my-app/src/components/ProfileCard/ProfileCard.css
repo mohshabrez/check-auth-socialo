@@ -8,6 +8,10 @@
     background: var(--cardColor);
 }
 
+.profile-photo-profile{
+    border: 3px solid var(--color-primary);
+}
+
 .profileImages{
     position: relative;
     display: flex;
@@ -96,6 +100,10 @@
     justify-content: center;
     margin-left: 5.5rem;
     cursor: pointer;
-    
-   
+}
+
+@media screen and (max-width: 768px){
+    .profileCard{
+        width: 150%;
+    }
 }
