@@ -8,7 +8,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { db, storage } from "../../config/firebase";
 import { Timestamp, addDoc, arrayUnion, collection, doc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { UseMedia } from "../../Context/MediaContext";
-// import Picker from "@emoji-mart/react";
+import Picker from "@emoji-mart/react";
 
 
 export function MiddleNav(){
@@ -151,7 +151,7 @@ export function MiddleNav(){
             </div>
             {showEmojis && (
           <div className="emoji">
-            {/* <Picker onEmojiSelect={addEmoji} /> */}
+            <Picker onEmojiSelect={addEmoji} />
           </div>
         )}
             </div>
